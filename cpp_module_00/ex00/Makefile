@@ -1,6 +1,6 @@
 NAME =	megaphone
-FLAGS = -Wall -Wextra -Werror -pthread
-COMPILER = clang++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -stdlib=libc++
+CXX = /usr/bin/clang++
 HEADERS =	$(wildcard ./*.hpp)
 
 SRC = 		$(wildcard ./*.cpp)
@@ -14,10 +14,17 @@ all: $(NAME)
 
 
 $(NAME): $(OBJ)
-	$(COMPILER) $(FLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	rm -f .depend
+
+.depend: $(SRC)
+	@rm -f .depend
+	$(CXX) $(CXXFLAGS) -MM $^ > .depend
+
+-include .depend
 
 %.cpp:
-	$(COMPILER) $(FLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)
