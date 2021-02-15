@@ -15,11 +15,11 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
-	rm -f .depend
+	@rm -f .depend
 
 .depend: $(SRC)
 	@rm -f .depend
-	$(CXX) $(CXXFLAGS) -MM $^ > .depend
+	@$(CXX) $(CXXFLAGS) -MM $^ > .depend
 
 -include .depend
 
@@ -27,9 +27,11 @@ $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
+	@rm -f .depend
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+
 
 re: fclean all
