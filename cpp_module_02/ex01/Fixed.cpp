@@ -31,6 +31,34 @@ void Fixed::setRawBits(int const raw)
 	fixed_point_value_ = raw;
 }
 
+Fixed::Fixed(const int in)
+{
+	std::cout << "Int constructor called" << std::endl;
+	this->setRawBits(in << 8);
+}
+
+Fixed::Fixed(const float in)
+{
+	std::cout << "Float constructor called" << std::endl;
+	this->setRawBits()
+}
+
+float Fixed::toFloat(void) const
+{
+
+}
+
+int Fixed::toInt(void) const
+{
+	return roundf()
+}
+
+std::ostream& Fixed::operator<<(std::ostream& os)
+{
+
+}
+
+
 Fixed::~Fixed()
 {
 	std::cout << "Destructor called" << std::endl;
