@@ -45,8 +45,8 @@ void Character::attack(Enemy* enemy)
 	weapon->attack();
 	enemy->takeDamage(weapon->getDamage());
 	if (enemy->getHP() <= 0)
-	{	delete enemy;
-		enemy->~Enemy();
+	{
+		delete enemy;
 	}
 }
 
