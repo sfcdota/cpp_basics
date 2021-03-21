@@ -1,1 +1,2 @@
 clang++ -Wall -Wextra -Werror -std=c++98 -stdlib=libc++ *.cpp && ./a.out
+clang++ -Wall -Wextra -Werror -stdlib=libc++ *.cpp && ./a.out
