@@ -14,6 +14,8 @@ PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & in
 
 PresidentialPardonForm & PresidentialPardonForm::operator=(PresidentialPardonForm const &in)
 {
+	if (&in == this)
+		return *this;
 	Form::operator=(in);
 	return *this;
 }

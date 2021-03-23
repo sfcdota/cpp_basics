@@ -14,6 +14,8 @@ RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & in) :
 
 RobotomyRequestForm & RobotomyRequestForm::operator=(RobotomyRequestForm const &in)
 {
+	if (&in == this)
+		return *this;
 	Form::operator=(in);
 	return *this;
 }

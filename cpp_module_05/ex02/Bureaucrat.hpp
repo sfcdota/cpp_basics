@@ -31,6 +31,7 @@ class Bureaucrat {
 		void signForm(Form & form);
 		void executeForm(Form & form);
 	private:
+		Bureaucrat();
 		std::string const name;
 		int grade;
 };

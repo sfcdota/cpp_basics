@@ -10,6 +10,7 @@ class RobotomyRequestForm : public Form {
 		void execute(Bureaucrat const & executor) const;
 		std::string const & getTarget(void) const;
 	private:
+		RobotomyRequestForm();
 		std::string const target;
 };
 #endif

@@ -11,7 +11,8 @@ Intern::Intern(Intern const & in)
 
 Intern & Intern::operator=(Intern const & in)
 {
-	(void)in;
+	if (&in == this)
+		return *this;
 	return *this;
 }
 
@@ -30,9 +31,9 @@ Intern::~Intern()
 	delete forms[2];
 }
 
-Intern::Intern()
+Intern::Intern(Form *forms[])
 {
-	forms[0] = new ShrubberyCreationForm("");
-	forms[1] = new RobotomyRequestForm("");
-	forms[2] = new PresidentialPardonForm("");
+	this->forms[0] = forms[0];
+	this->forms[1] = forms[1];
+	this->forms[2] = forms[2];
 }

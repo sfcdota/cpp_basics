@@ -178,7 +178,12 @@ int main()
 	// {
 	// 	std::cout << e.what() << std::endl;
 	// }
-	Intern intern;
+	Form* forms[3];
+	forms[0] = new ShrubberyCreationForm("");
+	forms[1] = new RobotomyRequestForm("");
+	forms[2] = new PresidentialPardonForm("");
+
+	Intern intern(forms);
 	Bureaucrat bur("bur", 1);
 	try
 	{

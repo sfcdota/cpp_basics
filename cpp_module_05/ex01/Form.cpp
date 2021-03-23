@@ -22,6 +22,8 @@ Form::Form(Form const & in): name(in.getName()), grade_to_sign(in.getGradeToSign
 
 Form const & Form::operator=(Form const & in)
 {
+	if (&in == this)
+		return *this;
 	this->is_signed = in.getIsSigned();
 	return *this;
 }

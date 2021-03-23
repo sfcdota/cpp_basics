@@ -13,6 +13,8 @@ Span::Span(Span const & s)
 
 Span & Span::operator=(Span const & s)
 {
+	if (&s == this)
+		return *this;
 	if (nums == s.nums)
 		return *this;
 	nums = s.nums;

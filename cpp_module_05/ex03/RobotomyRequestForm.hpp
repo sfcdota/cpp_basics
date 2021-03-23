@@ -11,6 +11,7 @@ class RobotomyRequestForm : public Form {
 		std::string const & getTarget(void) const;
 		Form * clone(std::string const & target) const;
 	private:
+		RobotomyRequestForm();
 		std::string const target;
 };
 #endif

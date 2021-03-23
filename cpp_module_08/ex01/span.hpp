@@ -35,6 +35,7 @@ class Span{
 		}
 
 	private:
+		Span();
 		std::vector<int> nums;
 		std::vector<int>::const_iterator last;
 };

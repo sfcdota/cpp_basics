@@ -34,6 +34,7 @@ class Form {
 		void beSigned(Bureaucrat const & bureaucrat);
 		virtual void execute(Bureaucrat const & executor) const;
 	private:
+		Form();
 		std::string const name;
 		bool is_signed;
 		int const grade_to_sign;

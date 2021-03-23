@@ -35,6 +35,7 @@ class Form {
 		virtual void execute(Bureaucrat const & executor) const;
 		virtual Form * clone(std::string const & target) const = 0;
 	private:
+		Form();
 		std::string const name;
 		bool is_signed;
 		int const grade_to_sign;

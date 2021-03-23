@@ -11,6 +11,7 @@ class ShrubberyCreationForm : public Form {
 		std::string const & getTarget(void) const;
 		Form * clone(std::string const & target) const;
 	private:
+		ShrubberyCreationForm();
 		std::string const target;
 };
 #endif

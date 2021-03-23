@@ -26,6 +26,7 @@ class Bureaucrat {
 			}
 		};
 	private:
+		Bureaucrat();
 		std::string const name;
 		int grade;
 };

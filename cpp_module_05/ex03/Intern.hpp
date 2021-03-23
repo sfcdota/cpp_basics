@@ -7,7 +7,7 @@
 
 class Intern {
 	public:
-		Intern();
+		Intern (Form *forms[]);
 		Intern(Intern const & in);
 		Intern & operator=(Intern const & in);
 		Form * makeForm(std::string const & type, std::string const & target);
@@ -20,6 +20,7 @@ class Intern {
 			}
 		};
 	private:
+		Intern();
 		Form *forms[3];
 };
 #endif

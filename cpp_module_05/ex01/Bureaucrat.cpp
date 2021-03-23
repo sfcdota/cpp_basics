@@ -45,7 +45,8 @@ std::string const & Bureaucrat::getName(void) const
 
 Bureaucrat & Bureaucrat::operator=(Bureaucrat const & in)
 {
-
+	if (&in == this)
+		return *this;
 	this->grade = in.getGrade();
 	return *this;
 }

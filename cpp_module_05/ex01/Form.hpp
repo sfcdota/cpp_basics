@@ -27,6 +27,7 @@ class Form {
 		int getGradeToExec(void) const;
 		void beSigned(Bureaucrat const & bureaucrat);
 	private:
+		Form();
 		std::string const name;
 		bool is_signed;
 		int const grade_to_sign;

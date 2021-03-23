@@ -15,6 +15,8 @@ ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & in) :
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator=(ShrubberyCreationForm const &in)
 {
+	if (&in == this)
+		return *this;
 	Form::operator=(in);
 	return *this;
 }
